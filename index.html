@@ -8,23 +8,21 @@
     <meta charset="UTF-8">    
     </head><body><style>
       
-#navbar { font: 900 11px open sans; letter-spacing: 1px; color: #fff; text-transform: uppercase; border-top: 4px solid #fff; padding-top: 10px; padding-bottom: 45px; width: 370px; margin-left: 200px; margin-top: -15px; }
-#navbar a { padding-right: 44px; cursor: pointer; }
-#carrossel { padding: 50px 20px; width: 1200px; }
-#carrossel img { margin: 0px 10px; }
-#carrossel a { cursor: pointer; color: white; font-size: 100px; margin-top: 10px; position: absolute; }
+#navbar { font: 900 10px open sans; letter-spacing: 1px; color: #fff; text-transform: uppercase; padding-top: 15px; float: right; }
+#navbar a { padding-right: 10px; cursor: pointer; }
 #pa-home { background-color: #f3f9ff; margin: 15px; }
-#pa-home t { color: #fff; font: 100 130px Open Sans; }
+#pa-home t { color: #fff; font: 100 30px Open Sans; float: left; }
+#pa-home y { border-bottom: 2px solid #fff; }
 #pa-home a { text-decoration: none; }
 
 .mat-capa { margin-bottom: 100px; background: #eee no-repeat top center; width: 100%; padding: 70px 0px; height: 460px; font: 400 13px lato; text-align: left;  }
 .mat-capa p { margin-bottom: -12px; text-indent: 25px; line-height: 140%; }
 .mat-capa l { line-height: 140%; }
 #pa-home tit { font: italic bold 50px Playfair Display; text-align: center; display: block;  line-height: 100%; }
-#pa-home subt { font: 600 11px open sans; text-transform: uppercase; letter-spacing: 1.5px; }
+#pa-home subt { font: 600 11px open sans; text-transform: uppercase; letter-spacing: 1.5px; line-height: 130%; }
 .mat-quote { font: 700 italic 25px playfair display; text-align: left; line-height: 100%; padding: 30px 0px; color: #e85d5d; }
 
-    .sp-slideshow { position: relative; margin: 0px auto; width: 1200px; height: 600px; }
+.sp-slideshow { position: relative; margin: 0px auto; width: 1200px; height: 600px; }
     .sp-content { background: #fff; position: relative; width: 100%;height: 100%; overflow: hidden; }
     
     .sp-parallax-bg {background: #f3f9ff; -webkit-background-size: cover;-moz-background-size: cover;background-size: cover;position: absolute;top: 0;left: 0;width: 100%;height: 100%;overflow: hidden;}
@@ -36,14 +34,15 @@
   
 </style>
 <style>
-    .sp-selector-1, .button-label-1 {margin-left: -36px;}
-    .sp-selector-2, .button-label-2 {margin-left: -18px;}
+    .sp-selector-1, .button-label-1 {margin-left: -20px;}
+    .sp-selector-2, .button-label-2 {margin-left: -10px;}
     .sp-selector-3, .button-label-3 {margin-left: 0px;}
-    .sp-selector-4, .button-label-4 {margin-left: 18px;}
-    .sp-selector-5, .button-label-5 {margin-left: 36px;}
-    .sp-selector-6, .button-label-6 {margin-left: 54px;}
-    .sp-selector-7, .button-label-7 {margin-left: 72px;}
-    .sp-selector-8, .button-label-8 {margin-left: 90px;}
+    .sp-selector-4, .button-label-4 {margin-left: 10px;}
+    .sp-selector-5, .button-label-5 {margin-left: 20px;}
+    .sp-selector-6, .button-label-6 {margin-left: 30px;}
+    .sp-selector-7, .button-label-7 {margin-left: 40px;}
+    .sp-selector-8, .button-label-8 {margin-left: 50px;}
+    .sp-selector-9, .button-label-9 {margin-left: 60px;}
     
     .sp-arrow {position: absolute;top: 50%;width: 28px;height: 37px;margin-top: -19px;display: none;cursor: pointer;z-index: 1000; background: center top transparent url(http://i.imgur.com/hEfN7rx.png) no-repeat;-webkit-transition: opacity linear 0.3s;-moz-transition: opacity linear 0.3s;-o-transition: opacity linear 0.3s;-ms-transition: opacity linear 0.3s;
     transition: opacity linear 0.3s;}
@@ -55,14 +54,17 @@
     .sp-selector-4:checked ~ .sp-arrow.sp-a5, 
     .sp-selector-5:checked ~ .sp-arrow.sp-a6,
     .sp-selector-6:checked ~ .sp-arrow.sp-a7,
-    .sp-selector-7:checked ~ .sp-arrow.sp-a8{right: 15px;display: block;background-position: top right;}
+    .sp-selector-7:checked ~ .sp-arrow.sp-a8,
+    .sp-selector-8:checked ~ .sp-arrow.sp-a9{right: 15px;display: block;background-position: top right;}
+    
     .sp-selector-2:checked ~ .sp-arrow.sp-a1,
     .sp-selector-3:checked ~ .sp-arrow.sp-a2,
     .sp-selector-4:checked ~ .sp-arrow.sp-a3,
     .sp-selector-5:checked ~ .sp-arrow.sp-a4,
     .sp-selector-6:checked ~ .sp-arrow.sp-a5, 
     .sp-selector-7:checked ~ .sp-arrow.sp-a6,
-    .sp-selector-8:checked ~ .sp-arrow.sp-a7{left: 15px;display: block;background-position: top left;}
+    .sp-selector-8:checked ~ .sp-arrow.sp-a7,
+    .sp-selector-9:checked ~ .sp-arrow.sp-a8{left: 15px;display: block;background-position: top left;}
     
     
     .sp-slideshow input:checked ~ .sp-content {-webkit-transition: background-position linear 0.6s, background-color linear 0.8s;-moz-transition: background-position linear 0.6s, background-color linear 0.8s;-o-transition: background-position linear 0.6s, background-color linear 0.8s;-ms-transition: background-position linear 0.6s, background-color linear 0.8s;transition: background-position linear 0.6s, background-color linear 0.8s;}
@@ -77,6 +79,7 @@
     input.sp-selector-6:checked ~ .sp-content {background-position: -500px 0;background-color: #7d7f72;} 
     input.sp-selector-7:checked ~ .sp-content {background-position: -500px 0;background-color: #7d7f72;} 
     input.sp-selector-8:checked ~ .sp-content {background-position: -500px 0;background-color: #7d7f72;} 
+    input.sp-selector-9:checked ~ .sp-content {background-position: -500px 0;background-color: #7d7f72;} 
     
     input.sp-selector-1:checked ~ .sp-content .sp-parallax-bg {background-position: 0 0;} 
     input.sp-selector-2:checked ~ .sp-content .sp-parallax-bg {background-position: 0 0;} 
@@ -86,8 +89,9 @@
     input.sp-selector-6:checked ~ .sp-content .sp-parallax-bg {background-position: 0 0;} 
     input.sp-selector-7:checked ~ .sp-content .sp-parallax-bg {background-position: 0 0;} 
     input.sp-selector-8:checked ~ .sp-content .sp-parallax-bg {background-position: 0 0;} 
+    input.sp-selector-9:checked ~ .sp-content .sp-parallax-bg {background-position: 0 0;} 
     
-    .sp-slider { position: relative; left: 0; width: 9600px;height: 100%;list-style: none; margin: 0;padding: 0;-webkit-transition: left ease-in 0.8s; -moz-transition: left ease-in 0.8s; -o-transition: left ease-in 0.8s; -ms-transition: left ease-in 0.8s;transition: left ease-in 0.8s; }
+    .sp-slider { position: relative; left: 0; width: 10800px;height: 100%;list-style: none; margin: 0;padding: 0;-webkit-transition: left ease-in 0.8s; -moz-transition: left ease-in 0.8s; -o-transition: left ease-in 0.8s; -ms-transition: left ease-in 0.8s;transition: left ease-in 0.8s; }
     
     .sp-slider > li {
     height:100%;
@@ -118,6 +122,7 @@
     input.sp-selector-6:checked ~ .sp-content .sp-slider {left: -6000px;}
     input.sp-selector-7:checked ~ .sp-content .sp-slider {left: -7200px;}
     input.sp-selector-8:checked ~ .sp-content .sp-slider {left: -8400px;}
+    input.sp-selector-9:checked ~ .sp-content .sp-slider {left: -9600px;}
     
     
     input.sp-selector-1:checked ~ .sp-content .sp-slider > li:first-child,
@@ -127,7 +132,8 @@
     input.sp-selector-5:checked ~ .sp-content .sp-slider > li:nth-child(5),
     input.sp-selector-6:checked ~ .sp-content .sp-slider > li:nth-child(6),
     input.sp-selector-7:checked ~ .sp-content .sp-slider > li:nth-child(7),
-    input.sp-selector-8:checked ~ .sp-content .sp-slider > li:nth-child(8){ opacity: 1; }
+    input.sp-selector-8:checked ~ .sp-content .sp-slider > li:nth-child(8),
+    input.sp-selector-9:checked ~ .sp-content .sp-slider > li:nth-child(9){ opacity: 1; }
     
 </style>
 <center>
@@ -135,27 +141,14 @@
 <div style="background-color: #fff; width: 100%; height: 20px; position: fixed; bottom: 0; z-index: 99999999;"></div>
 <div id="pa-home">
 
-      <div style="background: #f1e573; padding-top: 70px; padding-bottom: 50px;">
-      <a href="https://paideias.github.io/home/"><t>PÁ IDEIAS</t></a>
+      <div style="background: #f1e573; padding: 20px; height: 40px; padding-right: 0px;">
+      <center><div style="width: 1080px;">
+           <div style="width: 170px; display: inline-table; margin-top: 10px; margin-left: 100px;"><a href="https://paideias.github.io/sumario/" style="font: 900 25px lato; color: white;"><img src="http://i.imgur.com/0haKbHn.png" style="margin-right: 10px; float: left;" />SUMÁRIO</a></div>
+      <a href="https://paideias.github.io/home/"><t>PÁ <y>IDEIAS</y></t></a>
             <div id="navbar"><a>comprar</a><a>edições</a><a>favoritos</a><a>contato</a></div>
-      <div id="carrossel">
-      <a style="margin-left: -80px;">❮</a>
-      
-        <img src="http://i.imgur.com/jLdwSI1.png" />
-        <img src="http://i.imgur.com/jLdwSI1.png" />
-        <img src="http://i.imgur.com/jLdwSI1.png" />
-        <img src="http://i.imgur.com/jLdwSI1.png" />
-        <img src="http://i.imgur.com/jLdwSI1.png" />
-        <img src="http://i.imgur.com/jLdwSI1.png" />
-        
-      <a style="margin-left: 25px;">❯</a>  
-      </div></div>
+            </div></center></div>
 
   
-
-
-
-
 
 
 <div class="sp-slideshow">
