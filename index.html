@@ -10,7 +10,6 @@
       
 #navbar { font: 900 10px open sans; letter-spacing: 1px; color: #fff; text-transform: uppercase; padding-top: 15px; float: right; }
 #navbar a { padding-right: 10px; cursor: pointer; }
-#pa-home { background-color: #fff; }
 #pa-home t { color: #fff; font: 100 30px Open Sans; float: left; }
 #pa-home y { border-bottom: 2px solid #fff; }
 #pa-home a { text-decoration: none; }
@@ -21,17 +20,15 @@
 #pa-home tit { font: italic bold 50px Playfair Display; text-align: center; display: block;  line-height: 100%; }
 #pa-home subt { font: 600 11px open sans; text-transform: uppercase; letter-spacing: 1.5px; line-height: 130%; }
 .mat-quote { font: 700 italic 25px playfair display; text-align: left; line-height: 100%; padding: 30px 0px; color: #e85d5d; }
+
 .sp-slideshow { position: relative; margin: 0px auto; width: 1200px; height: 600px; }
-    .sp-content { background: #fff; position: relative; width: 100%;height: 100%; overflow: hidden; }
-    
-    .sp-parallax-bg {background: #fff; -webkit-background-size: cover;-moz-background-size: cover;background-size: cover;position: absolute;top: 0;left: 0;width: 100%;height: 100%;overflow: hidden;}
-    
-    .sp-slideshow input {position: absolute;bottom: 15px;left: 50%;width: 9px;height: 9px;z-index: 1001;cursor: pointer;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0);opacity: 0;}
-    
+.sp-content { background: #fff; position: relative; width: 100%;height: 100%; overflow: hidden; }
+.sp-parallax-bg {background: #fff; -webkit-background-size: cover;-moz-background-size: cover;background-size: cover;position: absolute;top: 0;left: 0;width: 100%;height: 100%;overflow: hidden;}
+.sp-slideshow input {position: absolute;bottom: 15px;left: 50%;width: 9px;height: 9px;z-index: 1001;cursor: pointer;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter: alpha(opacity=0);opacity: 0;}
 .sp-slideshow input + label {position: absolute;bottom: 20px; left: 100%;width: 6px;height: 6px;display: block;z-index: 1000; background-color: #fff; border: 1px solid #e85d5d;-webkit-border-radius: 50%;-moz-border-radius: 50%;border-radius: 50%;-webkit-transition: background-color linear 0.1s;-moz-transition: background-color linear 0.1s;-o-transition: background-color linear 0.1s;-ms-transition: background-color linear 0.1s;transition: background-color linear 0.1s;}
-    .sp-slideshow input:checked + label { background-color: #e85d5d;}
-  
-  
+.sp-slideshow input:checked + label { background-color: #e85d5d;}
+
+@media only screen and (min-width: 1900px) { .sp-slideshow { position: relative; margin: 90px auto; }  }
   
   
 .nav { padding: 30px 0px 0px 0px; color: #fff; color: black; font: 700 9px open sans; background-color: #5cd9ea;  font: 900 25px Lato; text-transform: uppercase; bottom: 0; position: absolute; width: 100%; }
